@@ -1,48 +1,29 @@
-package assignment_2;
+package assignment_10;
 
 public class Class_01 {
 
-    //making the obj1 as static because in static method you cannot have non static object.
-    static Class_02 obj1;
-    int sum =0;
-    int finalamount=0;
 
-    public static void main (String[] args) throws  Exception
-    {
-        Class_01 obj = new Class_01();
-                 obj1 = new Class_02();
-        obj.addition_of_two_numbers();
+    // private variables
+    private int age;
+    private String name;
 
-        System.out.println("The sum of two integer number is -->" +obj.sum);
-        obj.pizza_order_amount();
-        System.out.println("The final amount of pizza order is -->" +obj.finalamount);
-
-
+    // initialize age
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int pizza_order_amount()
-    {
-        int amount=101;
-        int gst=20;
-       // Part1-- From Class_01, calling an integer variable which is present is Class_02.
-        finalamount= amount + gst + obj1.sgst;
-        return finalamount;
-
-
+    // initialize name
+    public void setName(String name) {
+        this.name = name;
     }
-    public int addition_of_two_numbers()
-    {
 
+    // access age
+    public int getAge() {
+        return this.age;
+    }
 
-
-        int a=2;
-        int b=3;
-        //calling constructor of class_2 obj1.amount
-        //using constructor to reset the value of the variable from Class_01 to Class_02.
-        sum = a + b + obj1.amount;
-        return sum;
-
-
-
+    // access name
+    public String getName() {
+        return this.name;
     }
 }
